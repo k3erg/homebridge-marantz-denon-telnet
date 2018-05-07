@@ -1,0 +1,33 @@
+{
+  "name": "homebridge-marantz-denon-telnet",
+  "version": "0.0.1",
+  "description": "Marantz and Denon AVR Telnet Plugin for Homebridge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k3erg/homebridge-marantz-denon-telnet.git"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "author": "Mike Kronenberg <mike.kronenberg@kronenberg.org> (http://www.kronenberg.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k3erg/homebridge-marantz-denon-telnet/issues"
+  },
+  "homepage": "https://github.com/k3erg/homebridge-marantz-denon-telnet#readme",
+  "dependencies": {
+    "marantz-denon-telnet": "0.0.6",
+    "marantz-denon-upnpdiscovery": "0.0.1"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}
