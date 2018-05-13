@@ -98,11 +98,16 @@ function MarantzDenonTelnetPlatform(log, config, api) {
 
 
 
-// Handler will be invoked when user try to config your plugin.
-// Callback can be cached and invoke when necessary.
+/**
+    Handler will be invoked when user try to config your plugin.
+    Callback can be cached and invoke when necessary.
+    @param {Objcet} context .
+    @param {Object} request .
+    @param {Function} callback .
+*/
 MarantzDenonTelnetPlatform.prototype.configurationRequestHandler = function(context, request, callback) {
-  this.log("Context: ", JSON.stringify(context));
-  this.log("Request: ", JSON.stringify(request));
+  this.log('Context: ', JSON.stringify(context));
+  this.log('Request: ', JSON.stringify(request));
 /*
   // Check the request response
   if (request && request.response && request.response.inputs && request.response.inputs.name) {
@@ -116,7 +121,7 @@ MarantzDenonTelnetPlatform.prototype.configurationRequestHandler = function(cont
     callback(null, "platform", true, {"platform":"SamplePlatform", "otherConfig":"SomeData"});
 */
     return;
-  }
+};
 
 
 
