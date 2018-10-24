@@ -1,3 +1,7 @@
+[![NPM](https://nodei.co/npm/homebridge-marantz-denon-telnet.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/homebridge-marantz-denon-telnet/)
+
+
+
 # homebridge-marantz-denon-telnet
 Denon and Marantz AVR Telnet Plugin for Homebridge.
 
