@@ -1,6 +1,6 @@
 {
   "name": "homebridge-marantz-denon-telnet",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Marantz and Denon AVR Telnet Plugin for Homebridge",
   "main": "index.js",
   "scripts": {
@@ -31,6 +31,6 @@
   "homepage": "https://github.com/k3erg/homebridge-marantz-denon-telnet#readme",
   "dependencies": {
     "marantz-denon-telnet": "0.0.9",
-    "marantz-denon-upnpdiscovery": "0.0.3"
+    "marantz-denon-upnpdiscovery": "0.0.4"
   }
 }
