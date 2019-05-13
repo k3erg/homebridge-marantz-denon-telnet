@@ -15,7 +15,7 @@ The package is still in a very early stage - feedback is welcome. It supports mu
 
 
 ## How to Install this package?
-(sudo) npm install -g marantz-denon-telnet
+(sudo) npm install -g homebridge-marantz-denon-telnet
 
 
 
