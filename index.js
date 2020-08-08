@@ -188,7 +188,7 @@ MarantzDenonTelnetPlatform.prototype.addAccessoriesForDevice = function(device) 
     var mdt = new MarantzDenonTelnet(device.ip);
     mdt.getZones(function(error, data) {
         if (data) {
-            this.log('Zones: ", JSON.stringify(data));
+            this.log('Zones: ', JSON.stringify(data));
             for (var zoneId in data) {
                 DenonMarantzAVRSpeakerAccessory.create(platform, device, zoneId, data[zoneId]);
             }
