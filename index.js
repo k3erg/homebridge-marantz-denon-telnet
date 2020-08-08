@@ -92,12 +92,13 @@ function MarantzDenonTelnetPlatform(log, config, api) {
             platform.log('DidFinishLaunching');
 
             //var mdf = new MarantzDenonUPnPDiscovery(function(error, device) {   // discover devices
+            var d = config.device[0];
                 
-                platform.log('Found Device: ' + config.device[0].friendlyName + ' (' + config.device[0].ip + ')');   
-                if (platform.devicesDB[config.device[0].mac] || platform.devicedBlacklist[config.device[0].mac]) {
+                platform.log('Found Device: ' + d.friendlyName + ' (' + d.ip + ')');   
+                if (platform.devicesDB[d.mac] || platform.devicedBlacklist[d.mac]) {
                     return;
                 }
-                platform.addAccessoriesForDevice(config.device[0]);
+                platform.addAccessoriesForDevice(d);
             //});
         }.bind(this));
     }
