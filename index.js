@@ -76,7 +76,11 @@ function MarantzDenonTelnetPlatform(log, config, api) {
     this.accessories = [];
 
     log("CONFIG: ", JSON.stringify(config));
-    log("ADDR: ", config.devices[0].ip);
+    log("ADDR1: ", config.devices[0].ip);
+    log("ADDR2: ", config.devices.ip);
+    log("MAC: ", config.devices.mac);
+    log("Name: ", config.devices.friendlyName);
+    
     
     if (api) {
         // Save the API object as plugin needs to register new accessory via this object.
@@ -90,11 +94,11 @@ function MarantzDenonTelnetPlatform(log, config, api) {
 
             //var mdf = new MarantzDenonUPnPDiscovery(function(error, device) {   // discover devices
                 
-                platform.log('Found Device: ' + device[0].friendlyName + ' (' + device[0].ip + ')');   
-                if (platform.devicesDB[device[0].mac] || platform.devicedBlacklist[device[0].mac]) {
+                platform.log('Found Device: ' + config.device[0].friendlyName + ' (' + config.device[0].ip + ')');   
+                if (platform.devicesDB[config.device[0].mac] || platform.devicedBlacklist[config.device[0].mac]) {
                     return;
                 }
-                platform.addAccessoriesForDevice(device[0]);
+                platform.addAccessoriesForDevice(config.device[0]);
             //});
         }.bind(this));
     }
