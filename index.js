@@ -95,9 +95,9 @@ function MarantzDenonTelnetPlatform(log, config, api) {
             var d = config.device[0];
                 
                 platform.log('Found Device: ' + d.friendlyName + ' (' + d.ip + ')');   
-                if (platform.devicesDB[d.mac] || platform.devicedBlacklist[d.mac]) {
-                    return;
-                }
+                //if (platform.devicesDB[d.mac] || platform.devicedBlacklist[d.mac]) {
+                //    return;
+                //}
                 platform.addAccessoriesForDevice(d);
             //});
         }.bind(this));
