@@ -59,7 +59,7 @@ module.exports = function(homebridge) {
  */
 function MarantzDenonTelnetPlatform(log, config, api) {
     var platform = this;
-    log('Init');
+    log('Entered Init');
 
     // see that we have these ready in includes
     this.Accessory = Accessory;
