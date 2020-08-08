@@ -183,8 +183,14 @@ MarantzDenonTelnetPlatform.prototype.addAccessoriesForDevice = function(device) 
     if (!accessoryByDisplayName.includes('Power')) {
         DenonMarantzAVRSwitchAccessory.create(platform, device);
     }
+    
+    // ignore scans, device is obsolete, force basic values 
+    zoneId = "FP";
+    var zoneName = "FP123"
+    DenonMarantzAVRSpeakerAccessory.create(platform, device, zoneId, zoneName);
 
     // add speaker for all available Zones
+    /*
     var mdt = new MarantzDenonTelnet(device.ip);
     mdt.getZones(function(error, data) {
         if (data) {
@@ -193,7 +199,8 @@ MarantzDenonTelnetPlatform.prototype.addAccessoriesForDevice = function(device) 
                 DenonMarantzAVRSpeakerAccessory.create(platform, device, zoneId, data[zoneId]);
             }
         }
-    });
+    } */
+    );
 };
 
 
