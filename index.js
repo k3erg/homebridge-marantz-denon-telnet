@@ -75,6 +75,8 @@ function MarantzDenonTelnetPlatform(log, config, api) {
     this.config = config;
     this.accessories = [];
 
+    log("CONFIG:", JSON.stringify(config));
+    
     if (api) {
         // Save the API object as plugin needs to register new accessory via this object.
         this.api = api;
