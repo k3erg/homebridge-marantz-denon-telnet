@@ -199,7 +199,7 @@ MarantzDenonTelnetPlatform.prototype.addAccessoriesForDevice = function(device) 
                 DenonMarantzAVRSpeakerAccessory.create(platform, device, zoneId, data[zoneId]);
             }
         }
-    } */
+ */ }
     );
 };
 
