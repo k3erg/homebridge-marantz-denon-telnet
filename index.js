@@ -176,6 +176,7 @@ MarantzDenonTelnetPlatform.prototype.addAccessoriesForDevice = function(device) 
 
     // create lookup for existing Accessory
     for (index in this.accessories) {
+        this.log('Accessory: ', platform.accessories[index].displayName);
         accessoryByDisplayName.push(platform.accessories[index].displayName);
     }
 
@@ -186,7 +187,7 @@ MarantzDenonTelnetPlatform.prototype.addAccessoriesForDevice = function(device) 
     
     // ignore scans, device is obsolete, force basic values 
     zoneId = "FP";
-    var zoneName = "FP123"
+    var zoneName = "MAIN ZONE"
     DenonMarantzAVRSpeakerAccessory.create(platform, device, zoneId, zoneName);
 
     // add speaker for all available Zones
