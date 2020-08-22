@@ -91,7 +91,14 @@ function MarantzDenonTelnetPlatform(log, config, api) {
         this.api.on('didFinishLaunching', function() {
             platform.log('DidFinishLaunching');
 
-            //var mdf = new MarantzDenonUPnPDiscovery(function(error, device) {   // discover devices
+            // checking-upnp branch
+            var mdf = new MarantzDenonUPnPDiscovery(function(error, device) {   // discover devices
+                platform.log('MK >> error:' + JSON.stringify(error));
+                platform.log('MK >> Found device:' + JSON.stringify(device)); 
+            });
+            // end of branch changes
+            
+            // ignore upnp discovery, still does not work
             var d = config.devices[0];
                 
                 platform.log('Found Device: ' + d.friendlyName + ' (' + d.ip + ')');   
